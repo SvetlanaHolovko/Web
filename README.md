@@ -1,4 +1,4 @@
-# training - Space
+# Web landing
 
 ### Выполнил: Светлана Головко
 
