@@ -7,12 +7,10 @@ $(function () {
 		scrollOffset = $(window).scrollTop();
 
 	/* Fixed Header*/
-
-	// запускаем функцию
 	checkScroll(scrollOffset);
 
 	// скролим страницу
-	$(window).on("scroll", function () {
+	$(window).on("scroll resize", function () {
 		// обновляем значение скрола на сколько проскролили
 		scrollOffset = $(this).scrollTop();
 		// передаем в функцию новое значение
@@ -20,7 +18,6 @@ $(function () {
 	});
 
 	function checkScroll(scrollOffset) {
-
 		// если высота скрола > intro, то header.fixed
 		if (scrollOffset >= introH) {
 			header.addClass("fixed");
@@ -29,11 +26,9 @@ $(function () {
 		}
 	}
 
-
 	/* Smooth scroll */
 	$("[data-scroll]").on("click", function (event) {
 		event.preventDefault();
-
 		// получаем значение id из data-scroll
 		var $this = $(this),
 			blockId = $this.data('scroll'),
@@ -43,40 +38,23 @@ $(function () {
 		$("#nav a").removeClass("active");
 		// придаем нашей ссылке класс active
 		$this.addClass("active");
-
 		// плавно переходим на страницу
 		$("html, body").animate({
-			scrollTop: blockOffset
-		}, 500);
+			scrollTop: blockOffset - 49
+		}, 700);
 	})
-
-
-
-	/* Menu nav togle (бургер-меню) */
-	//$("#nav_toggle").on("click", function(event) {
-	//	event.preventDefault();
-
-	//	// бургер превращаем в крестик
-	//	$(this).toggleClass("active");
-
-	//	$("#nav").toggleClass("active");
-
-	//});
-
-	/* Бургер-меню */
-
-	const burgerMenu = document.querySelector(".header__burger");
-	const menuHeader = document.querySelector(".header__menu");
-	if (burgerMenu) {
-		burgerMenu.addEventListener("click", function (e) {
-			document.body.classList.toggle("lock");
-			burgerMenu.classList.toggle("active");
-			menuHeader.classList.toggle("active");
-		});
-	}
-
 });
 
+/* Бургер-меню */
+const burgerMenu = document.querySelector(".header__burger");
+const menuHeader = document.querySelector(".header__menu");
+if (burgerMenu) {
+	burgerMenu.addEventListener("click", function (e) {
+		document.body.classList.toggle("lock");
+		burgerMenu.classList.toggle("active");
+		menuHeader.classList.toggle("active");
+	});
+}
 
 /*========== ПЛАН ===========*/
 /*
