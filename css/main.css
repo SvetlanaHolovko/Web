@@ -148,12 +148,8 @@ main {
 .header-top {
   min-height: 50px;
   width: 100%;
-  outline: 1px solid #32b0ee;
-
   position: fixed;
   /*position: relative;*/
-  top: 0;
-  left: 0;
   z-index: 50;
   background-color: rgba(16, 22, 54, 0.4);
 }
@@ -171,19 +167,10 @@ main {
 }
 
 .header-top.fixed {
-  background-color: #2e2f38;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-
+  background-color: rgba(16, 22, 54, 0.98);
   position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-
-  transform: translate3d(0, 0, 0);
-}
-
-.header.active {
-  background-color: #2e2f38;
+  height: auto;
+  z-index: 50;
 }
 
 .header__container {
@@ -266,7 +253,7 @@ main {
   border: 0;
   background: none;
   top: 50%;
-  right: 24px;
+  right: 0;
   z-index: 50;
 }
 
