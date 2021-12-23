@@ -133,6 +133,12 @@ main {
 	z-index: 99;
 }
 
+.container__fluid {
+	max-width: 1920px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
 .clearfix {
 	clear: both;
 }
@@ -626,7 +632,96 @@ html {
 	position: relative;
 }
 
-/*=========================== Team */
+/*=========================== WORKS ========================================*/
+.works {
+	padding-bottom: 100px;
+}
+.works__heart {
+	margin-bottom: 45px;
+}
+
+.gallery__button {
+	text-align: center;
+	margin-bottom: 75px;
+}
+.gallery__btn {
+	margin: 0 15px;
+	border: none;
+	background-color: transparent;
+	font-family: "Lato", sans-serif;
+	font-weight: 900;
+	line-height: 1.2;
+	color: #062033;
+	padding: 10px 20px;
+	text-align: center;
+	transition: all 0.3s ease;
+}
+.gallery__btn:hover,
+.gallery__btn.active {
+	background-color: rgb(76, 118, 255);
+	color: rgb(255, 255, 255);
+	border-radius: 6px;
+}
+.gallery__inner {
+	display: flex;
+}
+.gallery__items {
+	flex: 1 1 0;
+}
+.gallery__item {
+	position: relative;
+	/*background-color: rgba(76, 118, 255, 0.902);*/
+	background-color: rgb(76, 118, 255);
+}
+
+.gallery__item:hover .gallery__image {
+	opacity: 0.1;
+}
+
+.gallery__item:hover .gallery__info {
+	opacity: 1;
+}
+.gallery__image {
+	display: block;
+	width: 295px;
+	height: 220px;
+	object-fit: cover;
+	/*transition: opacity 0.2s linear;*/
+}
+
+.gallery__info {
+	width: 100%;
+	padding: 0 15px;
+	text-align: center;
+	color: #fff;
+	background-color: rgba(76, 118, 255, 0.902);
+	opacity: 0;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	z-index: 1;
+	transform: translate3d(0, -50%, 0);
+	transition: opacity 0.2s linear;
+}
+/*=========================== Team ========================================*/
+
+.Labore_et_dolore_magnam__Photography {
+	font-size: 18px;
+	font-family: "Open Sans";
+	color: rgb(255, 255, 255);
+	font-weight: bold;
+	line-height: 1.333;
+	text-align: center;
+	-moz-transform: matrix(0.735, 0, 0, 0.73333333333333, 0, 0);
+	-webkit-transform: matrix(0.735, 0, 0, 0.73333333333333, 0, 0);
+	-ms-transform: matrix(0.735, 0, 0, 0.73333333333333, 0, 0);
+	position: absolute;
+	left: 563.956px;
+	top: 2475.575px;
+	width: 229.291px;
+	height: 41px;
+	z-index: 129;
+}
 
 /*================================= RESPONSIVE Design ================*/
 
