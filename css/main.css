@@ -807,6 +807,7 @@ html {
 .facts__item {
   margin: 0 45px;
   text-align: center;
+  min-width: 135px;
 }
 .facts__item-images {
   width: 97px;
@@ -815,7 +816,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30px;
+  margin: 0 auto 30px;
 }
 .facts__item-images::before {
   position: absolute;
@@ -855,19 +856,6 @@ html {
   z-index: 194;*/
 }
 
-.Some_Fun_Facts {
-  /*font-size: 28px;
-  font-family: "Lato";
-  color: rgb(76, 118, 255);
-  text-transform: uppercase;
-  line-height: 1.2;
-  text-align: center;
-  position: absolute;
-  left: 477.336px;
-  top: 3610.7px;
-  z-index: 188;*/
-}
-
 /*================================= RESPONSIVE Design ================*/
 @media (max-width: 1190px) {
   .works-gallery__image {
@@ -884,7 +872,8 @@ html {
     min-height: 600px;
   }
 
-  .features {
+  .features,
+  .facts {
     padding: 50px 0 50px;
   }
   .heart {
@@ -917,6 +906,10 @@ html {
   }
   .works-gallery__image {
     min-width: 220px;
+  }
+
+  .facts__heart {
+    margin-bottom: 10px;
   }
 }
 
@@ -990,7 +983,8 @@ html {
   }
 
   /* features */
-  .features {
+  .features,
+  .facts {
     padding: 30px 0 30px;
   }
   .title {
@@ -1074,6 +1068,21 @@ html {
   .team__item-image {
     width: 100%;
   }
+
+  /* facts */
+  .facts__items {
+    margin: 0 -20px;
+  }
+  .facts__item {
+    margin: 20px;
+  }
+  .facts__item-images {
+    margin-bottom: 10px;
+  }
+  .facts__item-numbers {
+    font-size: 36px;
+    margin-bottom: 5px;
+  }
 }
 
 @media (max-width: 645px) {
@@ -1096,6 +1105,24 @@ html {
   }
   #slides ul li.active {
     width: 84px;
+  }
+
+  .facts__items {
+    flex-wrap: wrap;
+  }
+  .facts__item {
+    flex: 1 1 33%;
+  }
+  .facts__item-images {
+    width: 80px;
+    height: 80px;
+  }
+  .facts__item-images::before {
+    width: 78px;
+    height: 78px;
+  }
+  .facts__item-numbers {
+    font-size: 30px;
   }
 }
 
