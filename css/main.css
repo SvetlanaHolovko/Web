@@ -688,6 +688,7 @@ html {
   flex: 1 1 25%;
   margin: 0 10px;
   display: block;
+  transition: color 0.5s ease;
 }
 .team__item-box:hover .team__item-info {
   opacity: 1;
@@ -698,6 +699,9 @@ html {
 .team__item.active .team__item-name {
   color: rgb(14, 180, 147);
 }
+.team__item:hover .team__item-name {
+  color: rgb(14, 180, 147);
+}
 .team__item-image {
   height: 250px;
   object-fit: cover;
@@ -706,6 +710,7 @@ html {
 .team__item-box {
   position: relative;
   margin-bottom: 15px;
+  transition: color 0.5s ease;
 }
 .team__item-info {
   position: absolute;
@@ -766,6 +771,7 @@ html {
   color: rgb(6, 32, 51);
   text-align: center;
   margin-bottom: 10px;
+  transition: color 0.5s ease;
 }
 .team__items-position {
   font-family: "Open Sans", sans-serif;
@@ -842,6 +848,143 @@ html {
   text-transform: uppercase;
 }
 
+/*=========================== CONTACT ========================================*/
+.contact {
+  padding: 75px 0 80px;
+}
+.contact__header {
+  margin-bottom: 75px;
+}
+.contact__heart {
+  margin-bottom: 45px;
+}
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+}
+.contact-content__adress {
+  margin-right: 35px;
+}
+.contact-content__adress h4 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 1.45;
+  color: rgb(6, 32, 51);
+  margin-bottom: 35px;
+  max-width: 240px;
+}
+.contact-content__adress address {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 1.85;
+  color: #6a737b;
+}
+.contact-content__adress a {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 1.85;
+  text-decoration: none;
+  color: #6a737b;
+}
+.contact-content__form {
+  margin-right: 35px;
+}
+.contact-content__form h4 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1;
+  color: #062033;
+  margin-bottom: 30px;
+}
+.form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.form__input {
+  width: 49%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.2);
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.85;
+  margin-bottom: 20px;
+  padding: 15px;
+  padding-left: 5px;
+}
+.form__area {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.2);
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.85;
+  margin-bottom: 20px;
+  padding: 15px;
+  padding-left: 5px;
+}
+.form__button {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.form__btn {
+  background-color: transparent;
+  border: none;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #000;
+  cursor: pointer;
+  position: relative;
+}
+.form__btn::before {
+  position: absolute;
+  content: "";
+  background-image: url(../img/email.jpg);
+  left: -24px;
+  top: 5px;
+  width: 20px;
+  height: 14px;
+}
+.contact-content__social {
+  display: flex;
+  flex-direction: column;
+}
+.contact-content__social-link {
+  text-decoration: none;
+  color: rgba(6, 32, 51, 0.2);
+  width: 23px;
+  height: 23px;
+  margin-bottom: 10px;
+  transition: color 0.5s ease;
+}
+.contact-content__social-link:hover {
+  color: rgba(76, 118, 255, 0.949);
+}
+.contact-content__social-link i {
+  width: 23px;
+  height: 23px;
+}
+
+/*=========================== MAP ========================================*/
+.map {
+  padding: 80px 0 65px 235px;
+  background-image: url("../img/map-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .Circle {
   /*border-width: 2px;
   border-color: rgb(255, 255, 255);
@@ -873,7 +1016,8 @@ html {
   }
 
   .features,
-  .facts {
+  .facts,
+  .contact {
     padding: 50px 0 50px;
   }
   .heart {
@@ -978,13 +1122,15 @@ html {
   .header__intro-creative {
     font-size: 36px;
   }
-  .header__intro-title {
+  .header__intro-title,
+  .contact__header {
     margin-bottom: 30px;
   }
 
   /* features */
   .features,
-  .facts {
+  .facts,
+  .contact {
     padding: 30px 0 30px;
   }
   .title {
@@ -1076,12 +1222,39 @@ html {
   .facts__item {
     margin: 20px;
   }
-  .facts__item-images {
+  .facts__item-images,
+  .contact-content__form h4 {
     margin-bottom: 10px;
   }
   .facts__item-numbers {
     font-size: 36px;
     margin-bottom: 5px;
+  }
+
+  /* contact */
+  .contact-content {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .contact-content__adress h4 {
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+  .contact-content__adress,
+  .contact-content__form {
+    margin-right: 0;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .contact-content__social {
+    flex-direction: row;
+    order: -1;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .contact-content__social-link {
+    margin-right: 10px;
   }
 }
 
@@ -1193,6 +1366,15 @@ html {
   }
   .team__items-position {
     line-height: 1.2;
+  }
+
+  .form__input {
+    width: 100%;
+    padding: 10px 5px;
+    margin-bottom: 10px;
+  }
+  .contact-content__form {
+    margin-bottom: 0;
   }
 }
 
